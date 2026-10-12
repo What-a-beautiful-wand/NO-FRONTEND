@@ -1,0 +1,316 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #362417;
+    color: #f1dabf;
+    font-family: system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/*====================== HEADER ============================== */
+
+header {
+    padding: 30px 20px;
+    background-color: #2a1b12;
+    border-bottom: 5px solid #92817a;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+
+    font-size: 30px;
+}
+
+.header_text {
+    margin: 0;
+    text-align: center;
+
+    font-size: 50px;
+    font-weight: 800;
+    line-height: normal;
+    color: #fffbff;
+}
+
+.navigation_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.navigation_link {
+    padding: 10px 16px;
+    border: 2px solid #92817a;
+    background-color: #000500;
+
+    color: #fffbff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.navigation_link:hover {
+    background-color: #92817a;
+    color: #000500;
+}
+
+/*========================== MAIN ============================ */
+
+main {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+main section {
+    margin: 35px 0;
+}
+
+.section_title {
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #92817a;
+
+    color: #fffbff;
+    font-size: 30px;
+}
+
+/*====================== CARDS ========================== */
+
+.cards_section {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.card {
+    padding: 20px;
+    border: 5px solid #92817a;
+    background-color: #000500;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.card:hover {
+    background-color: #2a1b12;
+}
+
+.card_text {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.card_figure {
+    margin: 0;
+    padding: 5px;
+}
+
+.albom_name {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: normal;
+    color: #fffbff;
+}
+
+.albom_band_name {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Impact, sans-serif;
+    line-height: normal;
+    color: #fffbff;
+}
+
+.card_image {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid #92817a;
+}
+
+.price_text {
+    font-size: 18px;
+    font-weight: 350;
+    font-family: Impact;
+    color: #f1dabf;
+}
+
+.price_text:hover {
+    font-weight: 700;
+}
+
+/* ======================= DELIVERY ======================== */
+
+.delivery_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4 1fr);
+
+    background-color: #000500;
+
+    border: 2px solid #92817a;
+
+    margin: 0;
+    padding: 20px 20px 20px 45px;
+}
+
+.delivery_text {
+    margin: 8px 0;
+    padding: 8px;
+
+    font-size: 30px;
+    font-weight: 600;
+    font-family: system-ui;
+    color: #fffbff;
+}
+
+.delivery_text:hover {
+    border: 2px solid #92817a;
+    background-color: #2a1b12;
+    padding: 6px;
+}
+
+/* ====================== TABLE ======================== */
+
+.table_container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.comparsion_table {
+    width: 100%;
+    min-width: 700px;
+
+    background-color: #000500;
+    color: #fffbff;
+}
+
+.comparsion_table td,
+.comparsion_table th {
+    padding: 14px;
+    border: 3px solid #92817a;
+    text-align: center;
+}
+
+.comparsion_table thead th {
+    background-color: #2a1b12;
+    font-weight: 800;
+}
+
+.comparsion_table tbody tr:hover {
+    background-color: #2a1b12;
+}
+
+/* ==================== CONNECTION ====================== */
+
+.connection_information_text {
+    color: #fffbff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.connection_form {
+    padding: 25px;
+
+    border: 5px solid #92817a;
+    background-color: #000500;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form_group label {
+    color: #fffbff;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.form_group input,
+.form_group textarea {
+    padding: 12px;
+
+    border: 2px solid #92817a;
+    background-color: #362417;
+
+    color: #fffbff;
+    font-size: 16px;
+    font-family: system-ui, sans-serif;
+}
+
+.form_group input:focus,
+.form_group textarea:focus {
+    outline: 2px solid #f1dabf;
+}
+
+.form_group textarea {
+    resize: vertical;
+}
+
+.connection_button {
+    width: 180px;
+    padding: 12px 20px;
+
+    border: 2px solid #92817a;
+    background-color: #362417;
+
+    color: #fffbff;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.connection_button:hover {
+    background-color: #92817a;
+    color: #000500;
+}
+
+/* ==================== FOOTER ========================== */
+
+footer {
+    margin-top: 40px;
+    padding: 30px max(20px, calc((100% - 1160px) / 2));
+
+    border-top: 5px solid #92817a;
+    background-color: #000500;
+    color: #f1dabf;
+}
+
+.address_link {
+    color: #f1dabf;
+}
+
+.address_link:hover {
+    color: #fffbff;
+}
+
+/* ======================= MEDIA ========================== */
+
+@media (max-width: 900px) {
+    .cards_section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .cards_section {
+        grid-template-columns: 1fr;
+    }
+}

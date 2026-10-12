@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Магазин виниловых пластинок">
+    <title>Винил</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+
+    <header>
+        <h1 class="header_text">Магазин виниловых пластинок</h1>
+        <p><strong>Навигация</strong></p>
+        <nav>
+            <div class="navigation_container">
+                <a class="navigation_link" href="#catalog">Пластинки</a>
+                <a class="navigation_link" href="#delivery">Доставка</a>
+                <a class="navigation_link" href="#comparison">Сравнение</a>
+                <a class="navigation_link" href="#connection">Связь</a>
+                <a class="navigation_link" href="#contacts">Контакты и информация</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="catalog">
+            <h2 class="section_title">Выбор пластинки</h2>
+
+            <div class="cards_section">
+                <article class="card">
+                    <p class="card_text"><span class="albom_name">Meteora</span>
+                        <br><span class="albom_band_name">Linkin Park</span></p>
+                    
+                        <figure class="card_figure">
+                        <img src="https://upload.wikimedia.org/wikipedia/ru/4/44/Meteora_%28%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_%D0%B0%D0%BB%D1%8C%D0%B1%D0%BE%D0%BC%D0%B0%2C_2003%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original"
+                        alt="Обложка альбома Meteora"
+                        class="card_image">
+                    </figure>
+                    
+                    <span class="price_text">Цена: 60$</span>
+                </article>
+
+
+                <article class="card">
+                    <p class="card_text"><span class="albom_name">Trench</span>
+                        <br><span class="albom_band_name">Twenty one pilots</span></p>
+                    
+                        <figure class="card_figure">
+                        <img src="https://thumb.wikimedia.org/wikipedia/ru/thumb/c/c7/Trench_cover.jpg/330px-Trench_cover.jpg?utm_source=ru.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+                        alt="Обложка альбома Trech"
+                        class="card_image">
+                    </figure>
+                    
+                    <span class="price_text">Цена: 60$</span>
+                </article>
+
+
+                <article class="card">
+                    <p class="card_text"><span class="albom_name">The 2nd Law</span>
+                        <br><span class="albom_band_name">Muse</span></p>
+                    
+                        <figure class="card_figure">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/3/35/Muse_2nd_law.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
+                        alt="Обложка альбома The 2nd Law"
+                        class="card_image">
+                    </figure>
+                    
+                    <span class="price_text">Цена: 60$</span>
+                </article>
+            </div>
+        </section>
+
+
+
+        <section id="delivery">
+            <h2 class="section_title">Доставка</h2>
+
+            <div class="delivery_section">
+                <p class="delivery_text">Курьером</p>
+                <p class="delivery_text">Самовывоз</p>
+                <p class="delivery_text">Почта России</p>
+                <p class="delivery_text">CDЕК</p>
+            </div>
+        </section>
+
+
+
+        <section id="comparison">
+            <h2 class="section_title">Сравнение пластинок</h2>
+            <div class="table_container">
+                <table class="comparsion_table">
+                    <thead>
+                        <th>Название альбома</th>
+                        <th>Исполнитель</th>
+                        <th>Год выпуска</th>
+                        <th>Длительность</th>
+                        <th>Количество треков</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Meteora</td>
+                            <td>Linkin Park</td>
+                            <td>2003</td>
+                            <td>36:35</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Trench</td>
+                            <td>Twenty One Pilots</td>
+                            <td>2018</td>
+                            <td>56:04</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>The 2nd Law</td>
+                            <td>Muse</td>
+                            <td>2012</td>
+                            <td>53:49</td>
+                            <td>13</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+        <section id="connection">
+            <h2 class="section_title">Связь</h2>
+
+            <p class="connection_information_text">
+                Опишите проблему и оставьте контакты для обратной связи
+            </p>
+
+            <form class="connection_form" action="/connect_with_store" method="post">
+
+                <div class="form_group">
+                    <label for="email">Почта</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Ваш email"
+                        required
+                    >
+                </div>
+
+                <div class="form_group">
+                    <label for="tel">Номер телефона</label>
+                    <input
+                        id="tel"
+                        name="tel"
+                        type="tel"
+                        placeholder="+7 999 999-99-99"
+                    >
+                </div>
+
+                <div class="form_group">
+                    <label for="problem_text">Опишите проблему</label>
+                    <textarea
+                        id="problem_text"
+                        name="problem_text"
+                        rows="6"
+                        placeholder="Введите сообщение..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="connection_button">
+                    Отправить
+                </button>
+
+            </form>
+        </section>
+    </main>
+
+
+
+    <footer id="contacts">
+        <h2 class="section_title">Информация</h2>
+        <p>Для заказа выберите желаемую пластинку и удобный способ доставки, после чего оплатите заказ и ждите посылку</p>
+        <h2 class="section_title">Контакты</h2>
+        <address>
+            <p>Адрес: Улица хорошая дом прекрасный</p>
+            <p>Телефон: <a href="tel:+79999999998" class="address_link">+79999999998</a></p>
+            <p>Почта: <a href="mailto:example@gmail.com" class="address_link">example@gmail.com</a></p>
+        </address>
+    </footer>
+</body>
+</html>
