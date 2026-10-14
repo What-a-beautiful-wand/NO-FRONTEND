@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.error_text {
+    color: #c45e71;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: system-ui;
+}
+
 body {
     margin: 0;
     background-color: #362417;
@@ -26,6 +33,12 @@ header {
     align-items: center;
 
     font-size: 30px;
+}
+
+.catalog_count_text {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: system-ui;
 }
 
 .header_text {
@@ -104,6 +117,15 @@ main section {
     background-color: #2a1b12;
 }
 
+.card_unavailable {
+    background-color: #4a2028;
+    border-color: #824b58;
+}
+
+.card_unavailable:hover {
+    background-color: #5b2933;
+}
+
 .card_text {
     margin: 0;
     padding: 5px;
@@ -139,10 +161,10 @@ main section {
 }
 
 .price_text {
-    font-size: 18px;
-    font-weight: 350;
-    font-family: Impact;
-    color: #f1dabf;
+    font-size: 16px;
+    font-weight: 250;
+    font-family: system-ui;
+    color: #fffbff;
 }
 
 .price_text:hover {
