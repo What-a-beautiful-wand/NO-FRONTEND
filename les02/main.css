@@ -1,7 +1,9 @@
+/* База */
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .error_text {
@@ -20,7 +22,7 @@ body {
     line-height: 1.5;
 }
 
-/*====================== HEADER ============================== */
+/* Заголовок */
 
 header {
     padding: 30px 20px;
@@ -74,7 +76,7 @@ header {
     color: #000500;
 }
 
-/*========================== MAIN ============================ */
+/* Основная штучка */
 
 main {
     width: min(1200px, calc(100% - 40px));
@@ -94,7 +96,7 @@ main section {
     font-size: 30px;
 }
 
-/*====================== CARDS ========================== */
+/* Карточки товаров */
 
 .cards_section {
     display: grid;
@@ -103,6 +105,7 @@ main section {
 }
 
 .card {
+    position: relative;
     padding: 20px;
     border: 5px solid #92817a;
     background-color: #000500;
@@ -117,19 +120,66 @@ main section {
     background-color: #2a1b12;
 }
 
-.card_unavailable {
-    background-color: #4a2028;
-    border-color: #824b58;
+.card_like {
+    background-color: #361319;
+    border-color: #582430;
 }
 
-.card_unavailable:hover {
-    background-color: #5b2933;
+.card_like:hover {
+    background-color: #46151f;
 }
 
 .card_text {
     margin: 0;
-    padding: 5px;
+    padding: 5px 36px;
     text-align: center;
+}
+
+.favorite_button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 2px solid #92817a;
+    border-radius: 1px;
+    background-color: #2a1b12;
+    color: #f1dabf;
+    font-family: system-ui;
+    font-size: 26px;
+    line-height: 1;
+}
+
+.delete_button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 2px solid #923f3f5b;
+    border-radius: 1px;
+    background-color: #581a1a;
+    color: #ff0000;
+    font-family: system-ui;
+    font-size: 26px;
+    line-height: 1;
+}
+
+.favorite_button:hover {
+    background-color: #582430;
+    border-color: #ff8fa3;
+}
+
+.delete_button:hover {
+    background-color: #5a0505;
+    border-color: currentColor;
+}
+
+.favorite_button[aria-pressed="true"] {
+    color: #ff8fa3;
+    border-color: #ff8fa3;
 }
 
 .card_figure {
@@ -171,12 +221,12 @@ main section {
     font-weight: 700;
 }
 
-/* ======================= DELIVERY ======================== */
+/* Доставка */
 
 .delivery_section {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4 1fr);
+    grid-template-rows: repeat(4, 1fr);
 
     background-color: #000500;
 
@@ -202,7 +252,7 @@ main section {
     padding: 6px;
 }
 
-/* ====================== TABLE ======================== */
+/* Таблица сравнения */
 
 .table_container {
     width: 100%;
@@ -233,7 +283,7 @@ main section {
     background-color: #2a1b12;
 }
 
-/* ==================== CONNECTION ====================== */
+/* Связь Вась */
 
 .connection_information_text {
     color: #fffbff;
@@ -241,6 +291,7 @@ main section {
     font-weight: 500;
 }
 
+.product_form,
 .connection_form {
     padding: 25px;
 
@@ -285,6 +336,7 @@ main section {
     resize: vertical;
 }
 
+.product_button,
 .connection_button {
     width: 180px;
     padding: 12px 20px;
@@ -299,12 +351,13 @@ main section {
     cursor: pointer;
 }
 
+.product_button:hover,
 .connection_button:hover {
     background-color: #92817a;
     color: #000500;
 }
 
-/* ==================== FOOTER ========================== */
+/* Нижняя часть страницы */
 
 footer {
     margin-top: 40px;
@@ -323,7 +376,7 @@ footer {
     color: #fffbff;
 }
 
-/* ======================= MEDIA ========================== */
+/* Для мобилок */
 
 @media (max-width: 900px) {
     .cards_section {

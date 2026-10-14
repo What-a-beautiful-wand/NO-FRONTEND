@@ -9,7 +9,6 @@
 </head>
 <body>
 
-
     <header>
         <h1 class="header_text">Магазин виниловых пластинок</h1>
         <p><strong>Навигация</strong></p>
@@ -18,23 +17,19 @@
                 <a class="navigation_link" href="#catalog">Пластинки</a>
                 <a class="navigation_link" href="#delivery">Доставка</a>
                 <a class="navigation_link" href="#comparison">Сравнение</a>
+                <a class="navigation_link" href="#add-product">Добавить товар</a>
                 <a class="navigation_link" href="#connection">Связь</a>
                 <a class="navigation_link" href="#contacts">Контакты и информация</a>
             </div>
         </nav>
     </header>
 
-
     <main>
         <section id="catalog">
             <h2 class="section_title">Выбор пластинки</h2>
 
-            <div class="cards_section">
-                
-            </div>
+            <div class="cards_section"></div>
         </section>
-
-
 
         <section id="delivery">
             <h2 class="section_title">Доставка</h2>
@@ -46,8 +41,6 @@
                 <p class="delivery_text">CDЕК</p>
             </div>
         </section>
-
-
 
         <section id="comparison">
             <h2 class="section_title">Сравнение пластинок</h2>
@@ -67,7 +60,50 @@
             </div>
         </section>
 
+        <section id="add-product">
+            <h2 class="section_title">Добавление товара</h2>
 
+            <form class="product_form">
+                <div class="form_group">
+                    <label for="product-title">Название альбома</label>
+                    <input id="product-title" name="title" type="text" placeholder="Название альбома" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="product-band">Исполнитель</label>
+                    <input id="product-band" name="group_name" type="text" placeholder="Название группы" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="product-price">Цена, ₽</label>
+                    <input id="product-price" name="price" type="number" min="1" step="1" placeholder="5000" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="product-image">Ссылка на обложку</label>
+                    <input id="product-image" name="img_href" type="url" pattern="https?://.+" placeholder="https://example.com/cover.jpg" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="product-year">Год выпуска</label>
+                    <input id="product-year" name="year" type="number" min="1" step="1" placeholder="2026" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="product-duration">Длительность (минуты:секунды)</label>
+                    <input id="product-duration" name="duration" type="text" pattern="[0-9]+:[0-5][0-9]" placeholder="36:35" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="product-quantity">Количество треков</label>
+                    <input id="product-quantity" name="quantity" type="number" min="1" step="1" placeholder="10" required>
+                </div>
+
+                <button type="submit" class="product_button">Добавить товар</button>
+            </form>
+
+            <p class="product_status" role="status"></p>
+        </section>
 
         <section id="connection">
             <h2 class="section_title">Связь</h2>
@@ -118,8 +154,6 @@
         </section>
     </main>
 
-
-
     <footer id="contacts">
         <h2 class="section_title">Информация</h2>
         <p>Для заказа выберите желаемую пластинку и удобный способ доставки, после чего оплатите заказ и ждите посылку</p>
@@ -130,7 +164,6 @@
             <p>Почта: <a href="mailto:example@gmail.com" class="address_link">example@gmail.com</a></p>
         </address>
     </footer>
-
 
     <script src="script.js"></script>
 </body>
