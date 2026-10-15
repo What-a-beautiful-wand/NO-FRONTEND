@@ -42,6 +42,7 @@ let PRODUCTS = [
 // Элементы страницы
 
 const CATALOG = document.querySelector('.cards_section');
+const SORT_SELECT = document.querySelector('#catalog-sort');
 const HEADER = document.querySelector('header');
 const COMPARISON_CONTAINER = document.querySelector('.table_container');
 const COMPARISON_BODY = document.querySelector('.comparsion_table tbody');
@@ -61,10 +62,12 @@ if (PRODUCTS.length === 0) {
     showEmptyCatalog();
 } else {
     renderCardsCatalog();
+    sortCatalog();
     renderComparisonTable();
 }
 
 CATALOG.addEventListener('click', handleCatalogClick);
+SORT_SELECT.addEventListener('change', sortCatalog);
 PRODUCT_FORM.addEventListener('submit', addProduct);
 PRODUCT_FORM.addEventListener('input', () => {
     PRODUCT_STATUS.textContent = '';
@@ -103,6 +106,7 @@ function handleCatalogClick(event) {
     card.classList.toggle('card_like', updatedProduct.like);
     updateFavoriteButton(button, updatedProduct);
     updateCatalogCount();
+    sortCatalog();
 }
 
 // Добавление товара
@@ -141,6 +145,7 @@ function addProduct(event) {
     COMPARISON_CONTAINER.querySelector('.error_text')?.remove();
     COMPARISON_BODY.closest('table').hidden = false;
     renderCardsCatalog([product]);
+    sortCatalog();
     renderComparisonTable([product]);
     updateCatalogCount();
     PRODUCT_FORM.reset();
@@ -250,6 +255,29 @@ function renderCardsCatalog(products = PRODUCTS) {
         deleteButton.setAttribute('aria-label', `Удалить товар: ${product.title}`);
 
         card.append(favoriteButton, info, figure, price, deleteButton);
+        CATALOG.append(card);
+    }
+}
+
+// Сортировка карточек
+
+function sortCatalog() {
+    const products = [...PRODUCTS];
+
+    if (SORT_SELECT.value === 'favorites') {
+        products.sort((a, b) => Number(b.like) - Number(a.like));
+    } else if (SORT_SELECT.value === 'price-asc') {
+        products.sort((a, b) => a.price - b.price);
+    } else if (SORT_SELECT.value === 'price-desc') {
+        products.sort((a, b) => b.price - a.price);
+    } else if (SORT_SELECT.value === 'artist') {
+        products.sort((a, b) => a.group_name.localeCompare(b.group_name, 'ru'));
+    } else if (SORT_SELECT.value === 'title') {
+        products.sort((a, b) => a.title.localeCompare(b.title, 'ru'));
+    }
+
+    for (const product of products) {
+        const card = CATALOG.querySelector(`[data-product-id="${product.id}"]`);
         CATALOG.append(card);
     }
 }

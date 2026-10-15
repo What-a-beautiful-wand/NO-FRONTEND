@@ -1,5 +1,17 @@
 /* База */
 
+:root {
+    --vanilla: #fffaf1;
+    --vanilla-soft: #f7f0e4;
+    --vanilla-deep: #eee1ca;
+    --cocoa: #493729;
+    --cocoa-soft: #6d543f;
+    --caramel: #b58a5a;
+    --caramel-dark: #8c6844;
+    --rose: #a85f62;
+    --rose-soft: #f3e2dc;
+}
+
 *,
 *::before,
 *::after {
@@ -7,7 +19,7 @@
 }
 
 .error_text {
-    color: #c45e71;
+    color: var(--rose);
     font-size: 40px;
     font-weight: 700;
     font-family: system-ui;
@@ -15,8 +27,8 @@
 
 body {
     margin: 0;
-    background-color: #362417;
-    color: #f1dabf;
+    background-color: var(--vanilla-soft);
+    color: var(--cocoa);
     font-family: system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -26,8 +38,8 @@ body {
 
 header {
     padding: 30px 20px;
-    background-color: #2a1b12;
-    border-bottom: 5px solid #92817a;
+    background-color: var(--vanilla-deep);
+    border-bottom: 5px solid var(--caramel);
 
     display: flex;
     flex-direction: column;
@@ -50,7 +62,7 @@ header {
     font-size: 50px;
     font-weight: 800;
     line-height: normal;
-    color: #fffbff;
+    color: var(--cocoa);
 }
 
 .navigation_container {
@@ -62,18 +74,18 @@ header {
 
 .navigation_link {
     padding: 10px 16px;
-    border: 2px solid #92817a;
-    background-color: #000500;
+    border: 2px solid var(--caramel);
+    background-color: var(--vanilla);
 
-    color: #fffbff;
+    color: var(--cocoa);
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
 }
 
 .navigation_link:hover {
-    background-color: #92817a;
-    color: #000500;
+    background-color: var(--caramel);
+    color: var(--vanilla);
 }
 
 /* Основная штучка */
@@ -90,13 +102,44 @@ main section {
 .section_title {
     margin: 0 0 18px;
     padding-bottom: 8px;
-    border-bottom: 3px solid #92817a;
+    border-bottom: 3px solid var(--caramel);
 
-    color: #fffbff;
+    color: var(--cocoa);
     font-size: 30px;
 }
 
 /* Карточки товаров */
+
+.catalog_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    border-bottom: 3px solid var(--caramel);
+}
+
+.catalog_header .section_title {
+    margin: 0;
+    border-bottom: 0;
+}
+
+.catalog_sort {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+
+.catalog_sort select {
+    max-width: 100%;
+    padding: 8px;
+    border: 2px solid var(--caramel);
+    background-color: var(--vanilla);
+    color: var(--cocoa);
+    font: inherit;
+}
 
 .cards_section {
     display: grid;
@@ -107,8 +150,8 @@ main section {
 .card {
     position: relative;
     padding: 20px;
-    border: 5px solid #92817a;
-    background-color: #000500;
+    border: 2px solid var(--caramel);
+    background-color: var(--vanilla);
 
     display: flex;
     flex-direction: column;
@@ -117,16 +160,16 @@ main section {
 }
 
 .card:hover {
-    background-color: #2a1b12;
+    background-color: var(--vanilla-deep);
 }
 
 .card_like {
-    background-color: #361319;
-    border-color: #582430;
+    background-color: var(--rose-soft);
+    border-color: #d2aaa0;
 }
 
 .card_like:hover {
-    background-color: #46151f;
+    background-color: #ead1c9;
 }
 
 .card_text {
@@ -142,10 +185,10 @@ main section {
     width: 36px;
     height: 36px;
     padding: 0;
-    border: 2px solid #92817a;
+    border: 2px solid var(--caramel);
     border-radius: 1px;
-    background-color: #2a1b12;
-    color: #f1dabf;
+    background-color: var(--vanilla-deep);
+    color: var(--cocoa);
     font-family: system-ui;
     font-size: 26px;
     line-height: 1;
@@ -158,28 +201,28 @@ main section {
     width: 36px;
     height: 36px;
     padding: 0;
-    border: 2px solid #923f3f5b;
+    border: 2px solid #c58a83;
     border-radius: 1px;
-    background-color: #581a1a;
-    color: #ff0000;
+    background-color: var(--rose-soft);
+    color: #8d3938;
     font-family: system-ui;
     font-size: 26px;
     line-height: 1;
 }
 
 .favorite_button:hover {
-    background-color: #582430;
-    border-color: #ff8fa3;
+    background-color: #e7c9bf;
+    border-color: var(--rose);
 }
 
 .delete_button:hover {
-    background-color: #5a0505;
+    background-color: #e8c8c1;
     border-color: currentColor;
 }
 
 .favorite_button[aria-pressed="true"] {
-    color: #ff8fa3;
-    border-color: #ff8fa3;
+    color: var(--rose);
+    border-color: var(--rose);
 }
 
 .card_figure {
@@ -191,7 +234,7 @@ main section {
     font-size: 20px;
     font-weight: 800;
     line-height: normal;
-    color: #fffbff;
+    color: var(--cocoa);
 }
 
 .albom_band_name {
@@ -199,7 +242,7 @@ main section {
     font-weight: 300;
     font-family: Impact, sans-serif;
     line-height: normal;
-    color: #fffbff;
+    color: var(--cocoa);
 }
 
 .card_image {
@@ -207,14 +250,14 @@ main section {
     width: 180px;
     height: 180px;
     object-fit: cover;
-    border: 3px solid #92817a;
+    border: 3px solid var(--caramel);
 }
 
 .price_text {
     font-size: 16px;
     font-weight: 250;
     font-family: system-ui;
-    color: #fffbff;
+    color: var(--cocoa);
 }
 
 .price_text:hover {
@@ -228,9 +271,9 @@ main section {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
 
-    background-color: #000500;
+    background-color: var(--vanilla);
 
-    border: 2px solid #92817a;
+    border: 2px solid var(--caramel);
 
     margin: 0;
     padding: 20px 20px 20px 45px;
@@ -243,12 +286,12 @@ main section {
     font-size: 30px;
     font-weight: 600;
     font-family: system-ui;
-    color: #fffbff;
+    color: var(--cocoa);
 }
 
 .delivery_text:hover {
-    border: 2px solid #92817a;
-    background-color: #2a1b12;
+    border: 2px solid var(--caramel);
+    background-color: var(--vanilla-deep);
     padding: 6px;
 }
 
@@ -263,30 +306,30 @@ main section {
     width: 100%;
     min-width: 700px;
 
-    background-color: #000500;
-    color: #fffbff;
+    background-color: var(--vanilla);
+    color: var(--cocoa);
 }
 
 .comparsion_table td,
 .comparsion_table th {
     padding: 14px;
-    border: 3px solid #92817a;
+    border: 2px solid var(--caramel);
     text-align: center;
 }
 
 .comparsion_table thead th {
-    background-color: #2a1b12;
+    background-color: var(--vanilla-deep);
     font-weight: 800;
 }
 
 .comparsion_table tbody tr:hover {
-    background-color: #2a1b12;
+    background-color: var(--vanilla-deep);
 }
 
 /* Связь Вась */
 
 .connection_information_text {
-    color: #fffbff;
+    color: var(--cocoa);
     font-size: 20px;
     font-weight: 500;
 }
@@ -295,8 +338,8 @@ main section {
 .connection_form {
     padding: 25px;
 
-    border: 5px solid #92817a;
-    background-color: #000500;
+    border: 2px solid var(--caramel);
+    background-color: var(--vanilla);
 
     display: flex;
     flex-direction: column;
@@ -310,7 +353,7 @@ main section {
 }
 
 .form_group label {
-    color: #fffbff;
+    color: var(--cocoa);
     font-size: 17px;
     font-weight: 600;
 }
@@ -319,17 +362,17 @@ main section {
 .form_group textarea {
     padding: 12px;
 
-    border: 2px solid #92817a;
-    background-color: #362417;
+    border: 2px solid var(--caramel);
+    background-color: var(--vanilla-soft);
 
-    color: #fffbff;
+    color: var(--cocoa);
     font-size: 16px;
     font-family: system-ui, sans-serif;
 }
 
 .form_group input:focus,
 .form_group textarea:focus {
-    outline: 2px solid #f1dabf;
+    outline: 2px solid var(--caramel-dark);
 }
 
 .form_group textarea {
@@ -341,10 +384,10 @@ main section {
     width: 180px;
     padding: 12px 20px;
 
-    border: 2px solid #92817a;
-    background-color: #362417;
+    border: 2px solid var(--caramel);
+    background-color: var(--caramel);
 
-    color: #fffbff;
+    color: var(--vanilla);
     font-size: 16px;
     font-weight: 700;
 
@@ -353,8 +396,8 @@ main section {
 
 .product_button:hover,
 .connection_button:hover {
-    background-color: #92817a;
-    color: #000500;
+    background-color: var(--caramel-dark);
+    color: var(--vanilla);
 }
 
 /* Нижняя часть страницы */
@@ -363,17 +406,17 @@ footer {
     margin-top: 40px;
     padding: 30px max(20px, calc((100% - 1160px) / 2));
 
-    border-top: 5px solid #92817a;
-    background-color: #000500;
-    color: #f1dabf;
+    border-top: 5px solid var(--caramel);
+    background-color: var(--vanilla-deep);
+    color: var(--cocoa);
 }
 
 .address_link {
-    color: #f1dabf;
+    color: var(--cocoa-soft);
 }
 
 .address_link:hover {
-    color: #fffbff;
+    color: var(--cocoa);
 }
 
 /* Для мобилок */
@@ -385,6 +428,12 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .catalog_sort {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     .cards_section {
         grid-template-columns: 1fr;
     }

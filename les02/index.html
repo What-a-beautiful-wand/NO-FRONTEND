@@ -26,7 +26,20 @@
 
     <main>
         <section id="catalog">
-            <h2 class="section_title">Выбор пластинки</h2>
+            <div class="catalog_header">
+                <h2 class="section_title">Выбор пластинки</h2>
+
+                <div class="catalog_sort">
+                    <label for="catalog-sort">Сортировка</label>
+                    <select id="catalog-sort">
+                        <option value="favorites">Сначала избранное</option>
+                        <option value="price-asc">Цена: по возрастанию</option>
+                        <option value="price-desc">Цена: по убыванию</option>
+                        <option value="artist">Исполнитель: по алфавиту</option>
+                        <option value="title">Название альбома: по алфавиту</option>
+                    </select>
+                </div>
+            </div>
 
             <div class="cards_section"></div>
         </section>
