@@ -264,7 +264,9 @@ function renderCardsCatalog(products = PRODUCTS) {
 function sortCatalog() {
     const products = [...PRODUCTS];
 
-    if (SORT_SELECT.value === 'favorites') {
+    if (SORT_SELECT.value === 'default') {
+        products.sort((a, b) => a.id - b.id);
+    } else if (SORT_SELECT.value === 'favorites') {
         products.sort((a, b) => Number(b.like) - Number(a.like));
     } else if (SORT_SELECT.value === 'price-asc') {
         products.sort((a, b) => a.price - b.price);
