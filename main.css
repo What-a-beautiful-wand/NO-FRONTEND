@@ -215,6 +215,13 @@ main section {
     border-color: var(--rose);
 }
 
+.favorite_button,
+.delete_button,
+.product_button,
+.connection_button {
+    cursor: pointer;
+}
+
 .delete_button:hover {
     background-color: #e8c8c1;
     border-color: currentColor;
@@ -344,6 +351,13 @@ main section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.product_status,
+.connection_status {
+    min-height: 1.5em;
+    color: var(--cocoa-soft);
+    font-weight: 600;
 }
 
 .form_group {
