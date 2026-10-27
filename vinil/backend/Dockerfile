@@ -6,7 +6,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 COPY backend/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt \
-    && useradd --create-home --uid 10001 vinil
+    && useradd --create-home --uid 10001 vinil \
+    && mkdir -p /app/uploads && chown vinil:vinil /app/uploads
 COPY --chown=vinil:vinil backend/ ./
 USER vinil
 EXPOSE 8000

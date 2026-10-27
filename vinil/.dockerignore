@@ -9,4 +9,12 @@
 **/*.log
 .env
 .env.*
+**/.env
+**/.env.*
 !**/.env.example
+
+backend/static/uploads
+backend/openapi.json
+backups
+**/*-backup.sql
+**/*-backup.sql.gz

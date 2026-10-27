@@ -23,7 +23,14 @@ services:
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-vinil}:${POSTGRES_PASSWORD:-vinil_local}@db:5432/${POSTGRES_DB:-vinil}
       SEED_MOCK_DATA: ${SEED_MOCK_DATA:-true}
+      SESSION_HOURS: ${SESSION_HOURS:-168}
+      DELIVERY_FEE: ${DELIVERY_FEE:-390}
+      FREE_DELIVERY_FROM: ${FREE_DELIVERY_FROM:-10000}
+      PICKUP_ADDRESS: ${PICKUP_ADDRESS:-Адрес самовывоза уточнит менеджер}
+      MEDIA_ROOT: /app/uploads
       CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
+    volumes:
+      - media_data:/app/uploads
     ports:
       - "127.0.0.1:${BACKEND_PORT:-8000}:8000"
     depends_on:
@@ -55,3 +62,4 @@ services:
 
 volumes:
   postgres_data:
+  media_data:

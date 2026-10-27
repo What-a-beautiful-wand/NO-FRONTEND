@@ -36,3 +36,10 @@ backups/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Uploaded customer/admin media
+backend/static/uploads/
+backend/openapi.json
+
+*-backup.sql
+*-backup.sql.gz
