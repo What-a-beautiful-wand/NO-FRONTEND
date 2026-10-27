@@ -1,0 +1,38 @@
+# Environment and credentials
+.env
+.env.*
+!.env.example
+compose.override.yaml
+compose.override.yml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node / Vite
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
+*.tsbuildinfo
+
+# Local data and logs
+*.log
+*.pid
+*.sqlite
+*.sqlite3
+backups/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

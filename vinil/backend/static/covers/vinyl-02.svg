@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">The Beatles — Abbey Road</title>
+  <desc id="desc">Демонстрационная обложка, не оригинальное оформление альбома</desc>
+  <rect width="600" height="600" fill="#537065"/>
+  <circle cx="350" cy="285" r="210" fill="#19191d"/>
+  <g fill="none" stroke="#36363b" stroke-width="2">
+    <circle cx="350" cy="285" r="185"/><circle cx="350" cy="285" r="160"/>
+    <circle cx="350" cy="285" r="135"/><circle cx="350" cy="285" r="110"/>
+  </g>
+  <circle cx="350" cy="285" r="76" fill="#f1cc88"/>
+  <circle cx="350" cy="285" r="9" fill="#19191d"/>
+  <g fill="#fff6e6" font-family="sans-serif">
+    <text x="32" y="46" font-size="16" letter-spacing="4">VINIL / DEMO 02</text>
+    <text x="32" y="505" font-size="26" font-weight="bold"><tspan x="32" dy="0">Abbey Road</tspan></text>
+    <text x="32" y="571" font-size="20">The Beatles · 1969</text>
+  </g>
+</svg>

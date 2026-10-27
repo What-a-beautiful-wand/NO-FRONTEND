@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Kind of Blue",
+    "group_name": "Miles Davis",
+    "price": 4290,
+    "img_name": "Демонстрационная обложка: Miles Davis — Kind of Blue",
+    "img_href": "/media/covers/vinyl-01.svg",
+    "like": true,
+    "year": 1959,
+    "duration": "45:44",
+    "quantity": 8
+  },
+  {
+    "title": "Abbey Road",
+    "group_name": "The Beatles",
+    "price": 3990,
+    "img_name": "Демонстрационная обложка: The Beatles — Abbey Road",
+    "img_href": "/media/covers/vinyl-02.svg",
+    "like": false,
+    "year": 1969,
+    "duration": "47:23",
+    "quantity": 12
+  },
+  {
+    "title": "The Dark Side of the Moon",
+    "group_name": "Pink Floyd",
+    "price": 4590,
+    "img_name": "Демонстрационная обложка: Pink Floyd — The Dark Side of the Moon",
+    "img_href": "/media/covers/vinyl-03.svg",
+    "like": false,
+    "year": 1973,
+    "duration": "42:50",
+    "quantity": 5
+  },
+  {
+    "title": "Rumours",
+    "group_name": "Fleetwood Mac",
+    "price": 3490,
+    "img_name": "Демонстрационная обложка: Fleetwood Mac — Rumours",
+    "img_href": "/media/covers/vinyl-04.svg",
+    "like": false,
+    "year": 1977,
+    "duration": "39:03",
+    "quantity": 10
+  },
+  {
+    "title": "Discovery",
+    "group_name": "Daft Punk",
+    "price": 5190,
+    "img_name": "Демонстрационная обложка: Daft Punk — Discovery",
+    "img_href": "/media/covers/vinyl-05.svg",
+    "like": true,
+    "year": 2001,
+    "duration": "60:50",
+    "quantity": 4
+  },
+  {
+    "title": "Back to Black",
+    "group_name": "Amy Winehouse",
+    "price": 3290,
+    "img_name": "Демонстрационная обложка: Amy Winehouse — Back to Black",
+    "img_href": "/media/covers/vinyl-06.svg",
+    "like": false,
+    "year": 2006,
+    "duration": "34:56",
+    "quantity": 15
+  },
+  {
+    "title": "Blue Train",
+    "group_name": "John Coltrane",
+    "price": 4490,
+    "img_name": "Демонстрационная обложка: John Coltrane — Blue Train",
+    "img_href": "/media/covers/vinyl-07.svg",
+    "like": false,
+    "year": 1958,
+    "duration": "42:15",
+    "quantity": 6
+  },
+  {
+    "title": "Nevermind",
+    "group_name": "Nirvana",
+    "price": 3790,
+    "img_name": "Демонстрационная обложка: Nirvana — Nevermind",
+    "img_href": "/media/covers/vinyl-08.svg",
+    "like": false,
+    "year": 1991,
+    "duration": "42:38",
+    "quantity": 7
+  },
+  {
+    "title": "Random Access Memories",
+    "group_name": "Daft Punk",
+    "price": 5990,
+    "img_name": "Демонстрационная обложка: Daft Punk — Random Access Memories",
+    "img_href": "/media/covers/vinyl-09.svg",
+    "like": false,
+    "year": 2013,
+    "duration": "74:24",
+    "quantity": 3
+  },
+  {
+    "title": "Currents",
+    "group_name": "Tame Impala",
+    "price": 4190,
+    "img_name": "Демонстрационная обложка: Tame Impala — Currents",
+    "img_href": "/media/covers/vinyl-10.svg",
+    "like": false,
+    "year": 2015,
+    "duration": "51:12",
+    "quantity": 9
+  },
+  {
+    "title": "Группа крови",
+    "group_name": "Кино",
+    "price": 2990,
+    "img_name": "Демонстрационная обложка: Кино — Группа крови",
+    "img_href": "/media/covers/vinyl-11.svg",
+    "like": true,
+    "year": 1988,
+    "duration": "45:26",
+    "quantity": 11
+  },
+  {
+    "title": "In Rainbows",
+    "group_name": "Radiohead",
+    "price": 4690,
+    "img_name": "Демонстрационная обложка: Radiohead — In Rainbows",
+    "img_href": "/media/covers/vinyl-12.svg",
+    "like": false,
+    "year": 2007,
+    "duration": "42:39",
+    "quantity": 0
+  }
+]
